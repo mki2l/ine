@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ine Funaya Guided Tours | Living with the Sea in Japan</title>
+  <meta name="description" content="Explore the unique boat houses of Ine, Kyoto with local guides. Experience over 230 funaya (boat houses) lining the bay - a one-of-a-kind scenery in Japan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="/en/" class="header__logo">
+        <span class="header__logo-main">Ine Funaya</span>
+        <span class="header__logo-sub">Guided Tours</span>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="header__nav-list">
+          <li><a href="#about" class="header__nav-link">About Ine</a></li>
+          <li><a href="#plans" class="header__nav-link">Tour Plans</a></li>
+          <li><a href="#faq" class="header__nav-link">FAQ</a></li>
+          <li><a href="#access" class="header__nav-link">Access</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__cta">Book a Tour</a>
+      <a href="../" class="header__lang" aria-label="Japanese">JP</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920&q=80" alt="Scenic view of Ine Funaya" class="hero__bg-image">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Ine Town, Kyoto Prefecture</p>
+      <h1 class="hero__title">Discover Japan&apos;s<br>Original Waterfront Living</h1>
+      <p class="hero__description">
+        Explore 230 boat houses with local guides in Japan&apos;s only such scenery.
+      </p>
+      <a href="#plans" class="hero__cta">View Tours</a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ABOUT SECTION
+       ======================================== -->
+  <section class="about" id="about">
+    <div class="about__container">
+      <header class="section-header">
+        <p class="section-header__en">About Ine</p>
+        <h2 class="section-header__title">The Charm of Ine</h2>
+      </header>
+
+      <div class="about__intro">
+        <p class="about__lead">
+          Located at the eastern tip of the Tango Peninsula in northern Kyoto,<br class="about__br-desktop">
+          Funaya are traditional structures with boat garages on the first floor<br class="about__br-desktop">
+          and living quarters above - a unique architectural style of this region.
+        </p>
+      </div>
+
+      <!-- Gallery Carousel -->
+      <div class="about__gallery">
+        <div class="gallery" id="gallery">
+          <div class="gallery__track" id="galleryTrack">
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80" alt="Funaya scenery 1">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="Funaya scenery 2">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&q=80" alt="Funaya scenery 3">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&q=80" alt="Funaya scenery 4">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&q=80" alt="Funaya scenery 5">
+            </div>
+          </div>
+        </div>
+        <div class="gallery__controls">
+          <button class="gallery__btn gallery__btn--prev" id="galleryPrev" aria-label="Previous">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="gallery__btn gallery__btn--next" id="galleryNext" aria-label="Next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="about__features">
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 1 0-9.78 2.096A4.001 4.001 0 0 0 3 15z"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Important Preservation District</h3>
+          <p class="feature__text">Designated as an Important Preservation District for Groups of Traditional Buildings in 2005. The fishing village life from the Edo period continues to this day.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Four Seasons Beauty</h3>
+          <p class="feature__text">Cherry blossoms in spring, blue seas in summer, autumn foliage, and snowy winter landscapes. Enjoy the funaya scenery unique to each season.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Local Guide Tours</h3>
+          <p class="feature__text">Guides born and raised here share the charms of Ine that you will not find in any guidebook.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PLANS SECTION
+       ======================================== -->
+  <section class="plans" id="plans">
+    <div class="plans__container">
+      <header class="section-header section-header--light">
+        <p class="section-header__en">Tour Plans</p>
+        <h2 class="section-header__title">Our Tours</h2>
+      </header>
+
+      <div class="plans__grid">
+        <!-- Plan 1 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="Sea Taxi Plan">
+            <span class="plan-card__badge">Most Popular</span>
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">Sea Taxi Plan</h3>
+            <p class="plan-card__description">A 30-minute cruise on a small boat viewing the funaya from the sea. The close-up view of the boat houses is truly impressive.</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Duration: Approx. 30 min
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                Capacity: 2-12 people
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Price: From 1,500 / person
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">Book This Plan</a>
+          </div>
+        </article>
+
+        <!-- Plan 2 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Walking Tour Plan">
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">Walking Tour Plan</h3>
+            <p class="plan-card__description">A 60-minute walking tour through the funaya alleys, learning about the architecture and history of local life.</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Duration: Approx. 60 min
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                Capacity: 2-15 people
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Price: From 1,000 / person
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">Book This Plan</a>
+          </div>
+        </article>
+
+        <!-- Plan 3 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Funaya Lunch Plan">
+            <span class="plan-card__badge plan-card__badge--amber">Recommended</span>
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">Funaya Lunch Plan</h3>
+            <p class="plan-card__description">Enjoy fresh local seafood in an actual funaya. Great value when combined with the Sea Taxi tour.</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Duration: Approx. 120 min
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                Capacity: 2-8 people
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Price: From 5,500 / person
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">Book This Plan</a>
+          </div>
+        </article>
+
+        <!-- Plan 4 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Sunset Cruise">
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">Sunset Cruise</h3>
+            <p class="plan-card__description">Watch the funaya bathed in the golden glow of sunset from the boat. A seasonal favorite.</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                Duration: Approx. 45 min
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                Capacity: 2-10 people
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Price: From 2,500 / person
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">Book This Plan</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FAQ SECTION
+       ======================================== -->
+  <section class="faq" id="faq">
+    <div class="faq__container">
+      <header class="section-header">
+        <p class="section-header__en">FAQ</p>
+        <h2 class="section-header__title">Frequently Asked Questions</h2>
+      </header>
+
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>Do I need to make a reservation?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Yes, advance reservations are recommended. Weekends, holidays, Golden Week, and Obon periods tend to be especially busy, so we recommend booking early. Same-day reservations may be possible if space is available, but to ensure your spot, please book at least one day in advance.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>Are tours held in rainy weather?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Tours operate in light rain. For the Sea Taxi Plan, we have boats with covered areas for your comfort. However, tours may be cancelled for safety reasons in case of strong winds or severe weather. We will contact you the day before or on the morning of the tour if cancellation is necessary.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>Can children participate?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Absolutely! Families with children are welcome. Children under elementary school age must be accompanied by a guardian. Life jackets are provided on the Sea Taxi for your safety. Children under 3 years old are free of charge.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>Is parking available?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Yes, we have a free parking lot (approximately 30 spaces) located near the meeting point. If our lot is full, we can direct you to nearby paid parking options.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>What is the cancellation policy?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Cancellations made by the day before the tour are free of charge. Same-day cancellations incur a 50% fee, and no-shows are charged the full amount. There is no cancellation fee if the tour is cancelled due to weather conditions.</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>Are English-speaking guides available?</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>Yes, we have English-speaking guides available. Please indicate your preference for an English guide when making your reservation. We also have English information materials to help you enjoy your experience.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ACCESS SECTION
+       ======================================== -->
+  <section class="access" id="access">
+    <div class="access__container">
+      <header class="section-header section-header--light">
+        <p class="section-header__en">Access</p>
+        <h2 class="section-header__title">Getting Here</h2>
+      </header>
+
+      <div class="access__content">
+        <div class="access__info">
+          <div class="access__group">
+            <h3 class="access__label">Address</h3>
+            <p class="access__text">77 Hirata, Ine-cho, Yosa-gun,<br>Kyoto 626-0423, Japan</p>
+          </div>
+          <div class="access__group">
+            <h3 class="access__label">Contact</h3>
+            <p class="access__text">
+              TEL: <a href="tel:0772-32-0277">0772-32-0277</a><br>
+              Hours: 9:00-17:00 (Irregular holidays)
+            </p>
+          </div>
+          <div class="access__group">
+            <h3 class="access__label">By Train</h3>
+            <p class="access__text">From Kyoto Tango Railway "Amanohashidate Station",<br>take Tankai Bus for approx. 55 min to "Ine" stop</p>
+          </div>
+          <div class="access__group">
+            <h3 class="access__label">By Car</h3>
+            <p class="access__text">Approx. 30 min from "Yosa-Amanohashidate IC"<br>on Kyoto-Jukan Expressway via Route 178<br>*Free parking available (approx. 30 spaces)</p>
+          </div>
+        </div>
+        <div class="access__map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.5!2d135.2667!3d35.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5Lym5qC555S6!5e0!3m2!1sen!2sjp!4v1234567890"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            title="Map of Ine Town">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a href="/en/" class="footer__logo">
+            <span class="footer__logo-main">Ine Funaya</span>
+            <span class="footer__logo-sub">Guided Tours</span>
+          </a>
+          <p class="footer__description">
+            Explore the unique boat houses of Ine, Kyoto with local guides.<br>
+            Experience this one-of-a-kind scenery to your heart&apos;s content.
+          </p>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4 class="footer__nav-title">Menu</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#about">About Ine</a></li>
+              <li><a href="#plans">Tour Plans</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#access">Access</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4 class="footer__nav-title">Information</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#">Reservations</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Cancellation Policy</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4 class="footer__nav-title">Contact</h4>
+            <ul class="footer__nav-list footer__nav-list--contact">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <a href="tel:0772-32-0277">0772-32-0277</a>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <a href="mailto:info@ine-funaya.jp">info@ine-funaya.jp</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 Ine Funaya Guided Tours All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
