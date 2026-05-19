@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伊根の舟屋ガイドツアー | 海とともに暮らす、日本の原風景</title>
+  <meta name="description" content="京都府伊根町の舟屋群を地元ガイドがご案内。230軒以上の舟屋が織りなす日本唯一の景観を、船上から、まち歩きで、じっくりと体験できます。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">
+        <span class="header__logo-main">伊根の舟屋</span>
+        <span class="header__logo-sub">ガイドツアー</span>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="header__nav-list">
+          <li><a href="#about" class="header__nav-link">伊根の魅力</a></li>
+          <li><a href="#plans" class="header__nav-link">ツアープラン</a></li>
+          <li><a href="#faq" class="header__nav-link">よくある質問</a></li>
+          <li><a href="#access" class="header__nav-link">アクセス</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__cta">ツアーを予約する</a>
+      <a href="en/" class="header__lang" aria-label="English">EN</a>
+      <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920&q=80" alt="伊根の舟屋の風景" class="hero__bg-image">
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__subtitle">京都府伊根町</p>
+      <h1 class="hero__title">海とともに暮らす、<br>日本の原風景へ</h1>
+      <p class="hero__description">
+        230軒の舟屋が並ぶ日本唯一の景観を、地元ガイドとめぐる。
+      </p>
+      <a href="#plans" class="hero__cta">ツアーを見る</a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ABOUT SECTION
+       ======================================== -->
+  <section class="about" id="about">
+    <div class="about__container">
+      <header class="section-header">
+        <p class="section-header__en">About Ine</p>
+        <h2 class="section-header__title">伊根の魅力</h2>
+      </header>
+
+      <div class="about__intro">
+        <p class="about__lead">
+          京都府北部、丹後半島の東端に位置する伊根町。<br>
+          舟屋とは、1階が船のガレージ、2階が居住空間という<br>
+          この地域独特の建築様式です。
+        </p>
+      </div>
+
+      <!-- Gallery Carousel -->
+      <div class="about__gallery">
+        <div class="gallery" id="gallery">
+          <div class="gallery__track" id="galleryTrack">
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80" alt="舟屋の風景1">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="舟屋の風景2">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&q=80" alt="舟屋の風景3">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&q=80" alt="舟屋の風景4">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&q=80" alt="舟屋の風景5">
+            </div>
+          </div>
+        </div>
+        <div class="gallery__controls">
+          <button class="gallery__btn gallery__btn--prev" id="galleryPrev" aria-label="前へ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="gallery__btn gallery__btn--next" id="galleryNext" aria-label="次へ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="about__features">
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 1 0-9.78 2.096A4.001 4.001 0 0 0 3 15z"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">重要伝統的建造物群保存地区</h3>
+          <p class="feature__text">2005年に国の重要伝統的建造物群保存地区に選定。江戸時代から続く漁村の暮らしが今も息づいています。</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">四季折々の表情</h3>
+          <p class="feature__text">春の桜、夏の青い海、秋の紅葉、冬の雪景色。季節ごとに異なる舟屋の風景をお楽しみいただけます。</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">地元ガイドの案内</h3>
+          <p class="feature__text">この地で生まれ育ったガイドが、観光ガイドブックには載っていない伊根の魅力をお��えします。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PLANS SECTION
+       ======================================== -->
+  <section class="plans" id="plans">
+    <div class="plans__container">
+      <header class="section-header section-header--light">
+        <p class="section-header__en">Tour Plans</p>
+        <h2 class="section-header__title">ツアープラン</h2>
+      </header>
+
+      <div class="plans__grid">
+        <!-- Plan 1 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="海上タクシープラン">
+            <span class="plan-card__badge">人気No.1</span>
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">海上タクシープラン</h3>
+            <p class="plan-card__description">小型船で舟屋群を海から眺める約30分のクルーズ。間近で見る舟屋の迫力は圧巻です。</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                所要時間: 約30分
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                定員: 2〜12名
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                料金: ¥1,500〜 / 人
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">このプランを予約</a>
+          </div>
+        </article>
+
+        <!-- Plan 2 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="まち歩きガイドプラン">
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">まち歩きガイドプラン</h3>
+            <p class="plan-card__description">舟屋の路地を歩きながら、建築や暮らしの歴史を学ぶ約60分の散策ツアー。</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                所要時間: 約60分
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                定員: 2〜15名
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                料金: ¥1,000〜 / 人
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">このプランを予約</a>
+          </div>
+        </article>
+
+        <!-- Plan 3 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="舟屋ランチプラン">
+            <span class="plan-card__badge plan-card__badge--amber">おすすめ</span>
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">舟屋ランチプラン</h3>
+            <p class="plan-card__description">実際の舟屋で地元の新鮮な海の幸を堪能。海上タクシーとのセットでお得に。</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                所要時間: 約120分
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                定員: 2〜8名
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                料金: ¥5,500〜 / 人
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">このプランを予約</a>
+          </div>
+        </article>
+
+        <!-- Plan 4 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="サンセットクルーズ">
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">サンセットクルーズ</h3>
+            <p class="plan-card__description">夕陽に染まる舟屋群を船上から眺める特別なひととき。季節限定の人気プラン。</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                所要時間: 約45分
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                定員: 2〜10名
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                料金: ¥2,500〜 / 人
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">このプランを予約</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FAQ SECTION
+       ======================================== -->
+  <section class="faq" id="faq">
+    <div class="faq__container">
+      <header class="section-header">
+        <p class="section-header__en">FAQ</p>
+        <h2 class="section-header__title">よくある質問</h2>
+      </header>
+
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>予約は必要ですか？</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>はい、事前予約をお願いしております。特に週末や祝日、ゴールデンウィーク、お盆期間は混み合いますので、お早めのご予約をおすすめします。当日のご予約も空きがあれば承りますが、確実にご参加いただくためには前日までのご予約をお願いいたします。</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>雨天でもツアーは開催されますか？</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>小雨程度であれば開催いたします。海上タクシープランは屋根付きの船もございますのでご安心ください。ただし、強風や荒天の場合は安全のため中止となることがあります。その際は前日または当日朝にご連絡いたします。</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>子供も参加できますか？</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>もちろんです。お子様連れのご家族も大歓迎です。小学生以下のお子様は保護者同伴でご参加いただけます。海上タクシーにはライフジャケットを完備しておりますので、安心してお楽しみいただけます。3歳以下のお子様は無料です。</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>駐車場はありますか？</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>はい、無料駐車場をご用意しております（約30台収容）。集合場所のすぐ近くにございますので、お車でお越しの方も便利にご利用いただけます。満車の場合は近隣の有料駐車場をご案内いたします。</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>キャンセル料はかかりますか？</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>前日までのキャンセルは無料です。当日キャンセルの場合は料金の50%、無断キャンセルの場合は100%のキャンセル料を頂戴しております。天候不良による中止の場合はキャンセル料はかかりません。</p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">
+            <span>英語対応は可能ですか？</span>
+            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </summary>
+          <div class="faq__answer">
+            <p>はい、英語対応可能なガイドが在籍しております。ご予約時に「英語ガイド希望」とお伝えください。また、英語の説明資料もご用意しておりますので、外国人のお客様にもお楽しみいただけます。</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ACCESS SECTION
+       ======================================== -->
+  <section class="access" id="access">
+    <div class="access__container">
+      <header class="section-header section-header--light">
+        <p class="section-header__en">Access</p>
+        <h2 class="section-header__title">アクセス</h2>
+      </header>
+
+      <div class="access__content">
+        <div class="access__info">
+          <div class="access__group">
+            <h3 class="access__label">所在地</h3>
+            <p class="access__text">〒626-0423<br>京都府与謝郡伊根町字平田77</p>
+          </div>
+          <div class="access__group">
+            <h3 class="access__label">お問い合わせ</h3>
+            <p class="access__text">
+              TEL: <a href="tel:0772-32-0277">0772-32-0277</a><br>
+              営業時間: 9:00〜17:00（不定休）
+            </p>
+          </div>
+          <div class="access__group">
+            <h3 class="access__label">電車でお越しの場合</h3>
+            <p class="access__text">京都丹後鉄道「天橋立駅」より<br>丹海バスで約55分「伊根」下車</p>
+          </div>
+          <div class="access__group">
+            <h3 class="access__label">お車でお越しの場合</h3>
+            <p class="access__text">京都縦貫自動車道「与謝天橋立IC」より<br>国道178号線経由で約30分<br>※無料駐車場あり（約30台）</p>
+          </div>
+        </div>
+        <div class="access__map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.5!2d135.2667!3d35.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5Lym5qC555S6!5e0!3m2!1sja!2sjp!4v1234567890"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            title="伊根町の地図">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">
+            <span class="footer__logo-main">伊根の舟屋</span>
+            <span class="footer__logo-sub">ガイドツアー</span>
+          </a>
+          <p class="footer__description">
+            京都府伊根町の舟屋群を地元ガイドがご案内。<br>
+            日本唯一の景観を、心ゆくまでご堪能ください。
+          </p>
+        </div>
+
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <h4 class="footer__nav-title">メニュー</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#about">伊根の魅力</a></li>
+              <li><a href="#plans">ツアープラン</a></li>
+              <li><a href="#faq">よくある質問</a></li>
+              <li><a href="#access">アクセス</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4 class="footer__nav-title">ご案内</h4>
+            <ul class="footer__nav-list">
+              <li><a href="#">ご予約について</a></li>
+              <li><a href="#">よくあるご質問</a></li>
+              <li><a href="#">キャンセルポリシー</a></li>
+              <li><a href="#">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <h4 class="footer__nav-title">お問い合わせ</h4>
+            <ul class="footer__nav-list footer__nav-list--contact">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <a href="tel:0772-32-0277">0772-32-0277</a>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <a href="mailto:info@ine-funaya.jp">info@ine-funaya.jp</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2024 伊根の舟屋ガイドツアー All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
