@@ -85,6 +85,232 @@
     }
   ]
   </script>
+
+
+  <style>
+    /* ===== 追加スタイル ===== */
+
+    /* about__text */
+    .about__text {
+      font-size: 0.9375rem;
+      line-height: 2;
+      color: var(--color-gray-600);
+      margin-top: var(--space-lg);
+    }
+    .about__text--highlight {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--color-navy);
+      border-left: 3px solid var(--color-amber);
+      padding-left: var(--space-md);
+      margin-top: var(--space-xl);
+    }
+    .about__text--gift {
+      margin-top: var(--space-xl);
+      background: linear-gradient(135deg, #fdf6ec 0%, #fef9f3 100%);
+      border: 1px solid #f0d9b5;
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-xl);
+      font-size: 0.9375rem;
+      line-height: 1.9;
+      color: var(--color-gray-600);
+    }
+    .about__text--gift strong {
+      color: var(--color-amber);
+      font-weight: 600;
+    }
+
+    /* 行程タイムライン */
+    .itinerary {
+      margin-top: var(--space-3xl);
+      margin-bottom: var(--space-3xl);
+    }
+    .itinerary__title {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      text-align: center;
+      margin-bottom: var(--space-xl);
+      position: relative;
+    }
+    .itinerary__title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--color-amber);
+      margin: var(--space-sm) auto 0;
+    }
+    .itinerary__list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .itinerary__item {
+      display: flex;
+      gap: var(--space-lg);
+      align-items: flex-start;
+      position: relative;
+    }
+    .itinerary__item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 40px;
+      width: 2px;
+      height: calc(100% - 8px);
+      background: linear-gradient(to bottom, var(--color-amber), var(--color-gray-200));
+    }
+    .itinerary__num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: var(--color-navy);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+    .itinerary__body {
+      padding: var(--space-sm) 0 var(--space-xl);
+    }
+    .itinerary__step {
+      font-family: var(--font-serif);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: 4px;
+    }
+    .itinerary__note {
+      font-size: 0.8125rem;
+      color: var(--color-gray-400);
+      line-height: 1.6;
+    }
+    .itinerary__caution {
+      font-size: 0.8125rem;
+      color: var(--color-gray-600);
+      text-align: center;
+      margin-top: var(--space-md);
+      font-style: italic;
+    }
+
+    /* プランカード拡張 */
+    .plan-card__includes {
+      margin-bottom: var(--space-lg);
+    }
+    .plan-card__includes-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-sm);
+      font-family: var(--font-display);
+    }
+    .plan-card__includes ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .plan-card__includes li {
+      font-size: 0.8125rem;
+      color: var(--color-gray-600);
+      padding-left: 1em;
+      position: relative;
+      line-height: 1.6;
+    }
+    .plan-card__includes li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--color-amber);
+      font-size: 0.75rem;
+    }
+    .plan-card__note {
+      font-size: 0.75rem;
+      color: var(--color-gray-400);
+      margin-bottom: var(--space-md);
+      line-height: 1.6;
+      padding: var(--space-sm) var(--space-md);
+      background: #f9f7f4;
+      border-radius: var(--radius-sm);
+      border-left: 2px solid var(--color-gray-200);
+    }
+
+    /* オプションセクション */
+    .options {
+      padding: var(--space-4xl) var(--space-lg);
+      background-color: var(--color-cream);
+    }
+    .options__container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .options__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+    @media (min-width: 640px) {
+      .options__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .options__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .option-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-sm);
+      border-top: 3px solid var(--color-amber);
+      transition: box-shadow var(--transition-base), transform var(--transition-base);
+    }
+    .option-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+    .option-card__icon {
+      width: 48px;
+      height: 48px;
+      background: #fdf6ec;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-amber);
+      margin-bottom: var(--space-md);
+    }
+    .option-card__title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-navy);
+      margin-bottom: var(--space-sm);
+    }
+    .option-card__text {
+      font-size: 0.875rem;
+      color: var(--color-gray-600);
+      line-height: 1.8;
+    }
+    .option-card__caution {
+      font-size: 0.75rem;
+      color: var(--color-gray-400);
+      margin-top: var(--space-sm);
+      line-height: 1.6;
+    }
+  </style>
+  
 </head>
 <body>
   <!-- ========================================
@@ -196,7 +422,60 @@
         </div>
       </div>
 
-      <!-- Features -->
+      <div class="itinerary">
+        <h3 class="itinerary__title">Tour Itinerary</h3>
+        <ol class="itinerary__list">
+          <li class="itinerary__item">
+            <div class="itinerary__num">1</div>
+            <div class="itinerary__body">
+              <p class="itinerary__step">Meet at the Ine Town Tourist Information Center</p>
+            </div>
+          </li>
+          <li class="itinerary__item">
+            <div class="itinerary__num">2</div>
+            <div class="itinerary__body">
+              <p class="itinerary__step">Funaya Area Guided Walk</p>
+              <p class="itinerary__note">Learn about the unique geography and local daily life in Ine.</p>
+            </div>
+          </li>
+          <li class="itinerary__item">
+            <div class="itinerary__num">3</div>
+            <div class="itinerary__body">
+              <p class="itinerary__step">Inside a Funaya Boathouse</p>
+              <p class="itinerary__note">Step inside a private Funaya to see how locals live. Experience the unique feeling of having the sea right in your "backyard."</p>
+            </div>
+          </li>
+          <li class="itinerary__item">
+            <div class="itinerary__num">4</div>
+            <div class="itinerary__body">
+              <p class="itinerary__step">Scenic Sea Cruise</p>
+              <p class="itinerary__note">A 20-minute cruise around Ine Bay. Admire the stunning views of the Funaya from the water and immerse yourself in the scenery.</p>
+            </div>
+          </li>
+          <li class="itinerary__item">
+            <div class="itinerary__num">5</div>
+            <div class="itinerary__body">
+              <p class="itinerary__step">Mukai Sake Brewery Visit</p>
+              <p class="itinerary__note">Visit a historic sake brewery run by a female Toji (master brewer). *No tastings included.<br>※Closed on Thursdays and during temporary closures.</p>
+            </div>
+          </li>
+          <li class="itinerary__item">
+            <div class="itinerary__num">6</div>
+            <div class="itinerary__body">
+              <p class="itinerary__step">Traditional "Mondori" Trap Fishing Experience</p>
+            </div>
+          </li>
+          <li class="itinerary__item">
+            <div class="itinerary__num">7</div>
+            <div class="itinerary__body">
+              <p class="itinerary__step">Tour Wrap-up</p>
+              <p class="itinerary__note">Get insider tips on how to enjoy Ine and discover recommended local spots.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="itinerary__caution">*The order and contents of the itinerary are subject to change.</p>
+      </div>
+
       <div class="about__features">
         <article class="feature">
           <div class="feature__icon">
@@ -205,49 +484,37 @@
               <polyline points="9 22 9 12 15 12 15 22"/>
             </svg>
           </div>
-          <h3 class="feature__title">Inside Funaya Tour</h3>
-          <p class="feature__text">Step inside a private Funaya boat house. Experience the incredible feeling of the sea being your "front yard."</p>
+          <h3 class="feature__title">Inside a Funaya</h3>
+          <p class="feature__text">Step inside a private Funaya boathouse and experience the unique lifestyle where the ocean feels like your own backyard.</p>
         </article>
         <article class="feature">
           <div class="feature__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
           </div>
-          <h3 class="feature__title">Sea Cruise</h3>
-          <p class="feature__text">A 20-minute cruise around Ine Bay. Feel the essence of the boat houses from the water and become one with the landscape.</p>
-        </article>
-        <article class="feature">
-          <div class="feature__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 16v-4"/>
-              <path d="M12 8h.01"/>
-            </svg>
-          </div>
-          <h3 class="feature__title">Mondori Fishing Experience</h3>
-          <p class="feature__text">Experience a traditional fishing method. A precious moment to touch the genuine local way of life.</p>
-        </article>
-        <article class="feature">
-          <div class="feature__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
-          </div>
-          <h3 class="feature__title">Historic Preservation District</h3>
-          <p class="feature__text">Selected as a national Important Preservation District for Groups of Traditional Buildings in 2005. The lifestyle of a fishing village since the Edo period still thrives today.</p>
+          <h3 class="feature__title">Scenic Sea Cruise</h3>
+          <p class="feature__text">Enjoy a 20-minute cruise around Ine Bay. Take in the beautiful views of the boathouses from the sea and blend into the peaceful scenery.</p>
         </article>
         <article class="feature">
           <div class="feature__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
+              <path d="M12 8v4l3 3"/>
             </svg>
           </div>
-          <h3 class="feature__title">Seasonal Beauty</h3>
-          <p class="feature__text">Cherry blossoms in spring, crystal blue sea in summer, vivid foliage in autumn, and snowscapes in winter. Enjoy the changing face of the boat houses.</p>
+          <h3 class="feature__title">Traditional Trap Fishing</h3>
+          <p class="feature__text">Try your hand at "Mondori" fishing, a traditional local method. It's a precious glimpse into the authentic coastal lifestyle.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Mukai Sake Brewery</h3>
+          <p class="feature__text">Visit a local brewery helmed by a female master brewer. Feel the rich culture and deep history of Ine through its sake-making heritage.</p>
         </article>
         <article class="feature">
           <div class="feature__icon">
@@ -258,16 +525,25 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3 class="feature__title">Guided by Locals</h3>
-          <p class="feature__text">Our guides were born and raised in Ine, sharing stories and hidden charms that you won't find in any guidebook.</p>
+          <h3 class="feature__title">Connect with Locals</h3>
+          <p class="feature__text">Chat with residents and share stories inside their Funaya. Experience the real, unfiltered side of Ine that regular tourists never get to see.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </div>
+          <h3 class="feature__title">Original Souvenirs</h3>
+          <p class="feature__text">Get exclusive "Connect with Ine" postcards or select special gifts depending on your plan. Take the memories of your journey back home.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ========================================
-       PLANS SECTION
-       ======================================== -->
   <section class="plans" id="plans">
     <div class="plans__container">
       <header class="section-header section-header--light">
@@ -276,47 +552,15 @@
       </header>
 
       <div class="plans__grid">
-        <!-- Plan 1 -->
-        <article class="plan-card">
-          <div class="plan-card__image">
-            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="Sea Taxi Plan">
-            <span class="plan-card__badge">No.1 Popular</span>
-          </div>
-          <div class="plan-card__content">
-            <h3 class="plan-card__title">Sea Taxi Plan</h3>
-            <p class="plan-card__description">A 30-minute cruise to view the Funaya boat houses from the sea on a small boat. The view up close is absolutely breathtaking.</p>
-            <ul class="plan-card__details">
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-                Duration: Approx. 30 mins
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                </svg>
-                Capacity: 2–12 people
-              </li>
-              <li>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                </svg>
-                Price: From ¥1,500 / person
-              </li>
-            </ul>
-            <a href="#" class="plan-card__cta">Book This Plan</a>
-          </div>
-        </article>
 
-        <!-- Plan 2 -->
         <article class="plan-card">
           <div class="plan-card__image">
-            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Town Walking Guide Plan">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Bura-Ine 60-Minute Course">
+            <span class="plan-card__badge">Standard</span>
           </div>
           <div class="plan-card__content">
-            <h3 class="plan-card__title">Town Walking Guide Plan</h3>
-            <p class="plan-card__description">A 60-minute walking tour through the narrow alleys of Ine, learning about the architecture and local history.</p>
+            <h3 class="plan-card__title">"Bura-Ine"<br><small style="font-size:0.8em;font-weight:400;">60-Min Standard Course</small></h3>
+            <p class="plan-card__description">Stroll through the Funaya area to experience the geography, daily life, and history. The perfect introductory plan for first-time visitors.</p>
             <ul class="plan-card__details">
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -328,34 +572,46 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
                 </svg>
-                Capacity: 2–15 people
+                Capacity: 2–5 people
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
-                Price: From ¥1,000 / person
+                ¥11,000 for 2 people (tax incl.)
               </li>
             </ul>
+            <p class="plan-card__note">Additional guests: +¥4,400 per person / up to 5 people</p>
+            <div class="plan-card__includes">
+              <p class="plan-card__includes-title">What's Included</p>
+              <ul>
+                <li>Guided walk in the Funaya area</li>
+                <li>Commentary on local history & lifestyle</li>
+                <li>Private Funaya interior tour</li>
+                <li>Traditional "Mondori" fishing experience</li>
+                <li>Guiding to the best photo spots</li>
+                <li>Exclusive "Connect with Ine" postcard</li>
+              </ul>
+            </div>
+            <p class="plan-card__note">*Please note: Sea taxi / cruise is not included in this plan.</p>
             <a href="#" class="plan-card__cta">Book This Plan</a>
           </div>
         </article>
 
-        <!-- Plan 3 -->
         <article class="plan-card">
           <div class="plan-card__image">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Funaya Lunch Plan">
-            <span class="plan-card__badge plan-card__badge--amber">Recommended</span>
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="Feel Ine Journey 90-Minute Course">
+            <span class="plan-card__badge">Most Popular</span>
           </div>
           <div class="plan-card__content">
-            <h3 class="plan-card__title">Funaya Lunch Plan</h3>
-            <p class="plan-card__description">Savor fresh local seafood inside a real Funaya boat house. Best value when booked as a set with the Sea Taxi cruise.</p>
+            <h3 class="plan-card__title">"Feel Ine Journey"<br><small style="font-size:0.8em;font-weight:400;">90-Minute Course</small></h3>
+            <p class="plan-card__description">A custom-tailored tour based on your interests. Immerse yourself deeply into Ine with a sake brewery visit and a scenic sea cruise.</p>
             <ul class="plan-card__details">
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
-                Duration: Approx. 120 mins
+                Duration: Approx. 90 mins
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -367,44 +623,151 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
-                Price: From ¥5,500 / person
+                ¥17,600 per group of 2 (tax incl.)
               </li>
             </ul>
+            <p class="plan-card__note">Additional guests: +¥5,500 per person / up to 8 people</p>
+            <div class="plan-card__includes">
+              <p class="plan-card__includes-title">What's Included</p>
+              <ul>
+                <li>Pre-tour consultation (Custom-tailored itinerary)</li>
+                <li>Guided walk in the Funaya area (History & culture)</li>
+                <li>Mukai Sake Brewery visit</li>
+                <li>Private Funaya interior tour</li>
+                <li>Traditional "Mondori" fishing experience</li>
+                <li>Guiding to the best photo spots</li>
+                <li>Ine Bay sea cruise (Approx. 20 mins)</li>
+              </ul>
+            </div>
+            <p class="plan-card__note">※The brewery is closed on Thursdays and during temporary closures.</p>
             <a href="#" class="plan-card__cta">Book This Plan</a>
           </div>
         </article>
 
-        <!-- Plan 4 -->
-        <article class="plan-card">
+  <article class="plan-card">
           <div class="plan-card__image">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Sunset Cruise Plan">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Premium Connect with Ine Journey">
+            <span class="plan-card__badge plan-card__badge--amber">Premium</span>
           </div>
           <div class="plan-card__content">
-            <h3 class="plan-card__title">Sunset Cruise</h3>
-            <p class="plan-card__description">A special moment to gaze at the boat houses glowing in the sunset from the water. A highly popular seasonal plan.</p>
+            <h3 class="plan-card__title">Premium "Connect with Ine"<br><small style="font-size:0.8em;font-weight:400;">180-Minute Course</small></h3>
+            <p class="plan-card__description">An exclusive, curated route covering the entire Tango Peninsula, including Amanohashidate. Includes lunch or a cafe experience, plus deep local interactions for the ultimate Ine experience.</p>
             <ul class="plan-card__details">
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
-                Duration: Approx. 45 mins
+                Duration: Approx. 180 mins
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
                 </svg>
-                Capacity: 2–10 people
+                Capacity: From 2 people
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
-                Price: From ¥2,500 / person
+                ¥55,000 for 2 people (tax incl.)
               </li>
             </ul>
+            <div class="plan-card__includes">
+              <p class="plan-card__includes-title">What's Included</p>
+              <ul>
+                <li>Pre-tour consultation (Fully personalized custom route)</li>
+                <li>Full guidance around the Tango Peninsula (incl. Amanohashidate)</li>
+                <li>Funaya boathouse tour</li>
+                <li>Lunch (1 menu item) OR Cafe experience (Free-flow drinks)</li>
+                <li>Dedicated chat and interaction time with local supporters</li>
+                <li>Your choice of an original curated souvenir</li>
+              </ul>
+            </div>
             <a href="#" class="plan-card__cta">Book This Plan</a>
           </div>
         </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="options" id="options">
+    <div class="options__container">
+      <header class="section-header">
+        <p class="section-header__en">Options</p>
+        <h2 class="section-header__title">Optional Experiences</h2>
+      </header>
+
+      <div class="options__grid">
+
+        <div class="option-card">
+          <div class="option-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </div>
+          <h3 class="option-card__title">Original Souvenir Selection</h3>
+          <p class="option-card__text">Handpick your favorite "Connect with Ine" souvenirs to take home. Keep the warmth of your journey alive, just like a time capsule.</p>
+        </div>
+
+        <div class="option-card">
+          <div class="option-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+          </div>
+          <h3 class="option-card__title">Funaya Sunset Cruise</h3>
+          <p class="option-card__text">A magical, exclusive cruise to enjoy Ine Bay as it turns a stunning golden hue. Spend an unforgettable evening on the water.</p>
+          <p class="option-card__caution">*Sea taxis are subject to cancellation due to weather or sea conditions.</p>
+        </div>
+
+        <div class="option-card">
+          <div class="option-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="option-card__title">Pre-Checkout Morning Tour</h3>
+          <p class="option-card__text">A special guided tour on the morning after your stay. Experiencing the serene, quiet atmosphere of Ine at dawn is truly extraordinary.</p>
+        </div>
+
+        <div class="option-card">
+          <div class="option-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="option-card__title">Early Morning Fishing Port Tour</h3>
+          <p class="option-card__text">Explore the bustling fishing port at sunrise with a local guide. You can experience "Hamagai" (buying fresh catch directly at the pier) with cash.</p>
+          <p class="option-card__caution">※Not available on port holidays or during rough weather.<br>※Please bring a cooler box.<br>※Rain boots, clothing you don't mind getting dirty, and disposable plastic gloves are highly recommended.</p>
+        </div>
+
+        <div class="option-card">
+          <div class="option-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="option-card__title">Local Supporter Interaction</h3>
+          <p class="option-card__text">Visit the homes and boathouses of local residents to hear firsthand stories about their daily lives. A deep immersion into the authentic local life of Ine.</p>
+        </div>
+
+        <div class="option-card">
+          <div class="option-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3 class="option-card__title">Sea Taxi Combo Plans</h3>
+          <p class="option-card__text">We can customize and combine any tour plan with a private sea taxi ride. Please request this option when making your reservation.</p>
+          <p class="option-card__caution">*Sea taxis are subject to cancellation due to weather or sea conditions.</p>
+        </div>
+
       </div>
     </div>
   </section>
