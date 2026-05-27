@@ -9,6 +9,82 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <!-- ========================================
+       STRUCTURED DATA (JSON-LD)
+       ======================================== -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "TourOperator",
+      "@id": "https://◯◯◯◯◯◯◯◯◯◯◯◯◯/en/#operator",
+      "name": "Connect with Ine - Private Funaya Guide",
+      "description": "Exclusive custom-made private boat house tours and sea cruises in Ine, Kyoto. Limited to one group per day.",
+      "url": "https://◯◯◯◯◯◯◯◯◯◯◯◯◯.com/en/",
+      "telephone": "+81-772-32-0277",
+      "priceRange": "¥1500 - ¥5500",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "626-0423",
+        "addressRegion": "Kyoto",
+        "addressLocality": "Yosa-gun, Ine-cho",
+        "streetAddress": "77 Hirata",
+        "addressCountry": "JP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "35.673056",
+        "longitude": "135.284444"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is a reservation required?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, advance reservations are highly recommended. Weekends, national holidays, Golden Week, and the Obon period can get very crowded, so early booking is advised. Same-day bookings are accepted if slots are available, but to guarantee your tour, please book at least one day in advance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will the tour operate in rainy weather?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tours will run in light rain. The Sea Taxi plan utilizes covered boats, so you can enjoy the tour comfortably. However, tours may be canceled in the event of strong winds or severe weather for safety. In such cases, we will contact you the day before or on the morning of the tour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is English assistance available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we have English-speaking guides. Please request an English guide when making your reservation. We also provide English explanatory materials so that our international guests can fully enjoy the experience."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
 </head>
 <body>
   <!-- ========================================
@@ -43,7 +119,7 @@
        ======================================== -->
   <section class="hero">
     <div class="hero__bg">
-      <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920&q=80" alt="Scenery of Ine Funaya" class="hero__bg-image">
+      <video src="../img/hero.mp4" autoplay muted loop alt="ine funaya" class="hero__bg-image"></video>
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
@@ -93,19 +169,16 @@
         <div class="gallery" id="gallery">
           <div class="gallery__track" id="galleryTrack">
             <div class="gallery__slide">
-              <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80" alt="Ine Scenery 1">
+              <img src="../img/ine_gallery01.jpg" alt="舟屋の風景">
             </div>
             <div class="gallery__slide">
-              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="Ine Scenery 2">
+              <img src="../img/ine_gallery02.jpg" alt="舟屋の風景">
             </div>
             <div class="gallery__slide">
-              <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&q=80" alt="Ine Scenery 3">
+              <img src="../img/ine_gallery03.jpg" alt="舟屋の風景">
             </div>
             <div class="gallery__slide">
-              <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&q=80" alt="Ine Scenery 4">
-            </div>
-            <div class="gallery__slide">
-              <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&q=80" alt="Ine Scenery 5">
+              <img src="../img/ine_gallery04.jpg" alt="舟屋の風景">
             </div>
           </div>
         </div>
