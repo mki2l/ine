@@ -3,240 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>伊根とツナガル旅 | 伊根の舟屋オーダーメイドガイドツアー</title>
+  <title>伊根とツナガル旅 | 1日1組限定のオーダーメイド舟屋ガイド</title>
   <meta name="description" content="景色が物語になる町、伊根。1日1組限定のオーダーメイドガイドで、ここでしか出逢えないあなただけの伊根をプロデュース。舟屋見学、海上クルーズ、もんどり漁体験など。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- GTM（アナリティクス、クラリティ）コード設置予定 -->
- 
-  <style>
-    /* ===== 追加スタイル ===== */
-
-    /* about__text */
-    .about__text {
-      font-size: 0.9375rem;
-      line-height: 2;
-      color: var(--color-gray-600);
-      margin-top: var(--space-lg);
-    }
-    .about__text--highlight {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      color: var(--color-navy);
-      border-left: 3px solid var(--color-amber);
-      padding-left: var(--space-md);
-      margin-top: var(--space-xl);
-    }
-    .about__text--gift {
-      margin-top: var(--space-xl);
-      background: linear-gradient(135deg, #fdf6ec 0%, #fef9f3 100%);
-      border: 1px solid #f0d9b5;
-      border-radius: var(--radius-md);
-      padding: var(--space-lg) var(--space-xl);
-      font-size: 0.9375rem;
-      line-height: 1.9;
-      color: var(--color-gray-600);
-    }
-    .about__text--gift strong {
-      color: var(--color-amber);
-      font-weight: 600;
-    }
-
-    /* 行程タイムライン */
-    .itinerary {
-      margin-top: var(--space-3xl);
-      margin-bottom: var(--space-3xl);
-    }
-    .itinerary__title {
-      font-family: var(--font-serif);
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--color-navy);
-      text-align: center;
-      margin-bottom: var(--space-xl);
-      position: relative;
-    }
-    .itinerary__title::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 2px;
-      background: var(--color-amber);
-      margin: var(--space-sm) auto 0;
-    }
-    .itinerary__list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .itinerary__item {
-      display: flex;
-      gap: var(--space-lg);
-      align-items: flex-start;
-      position: relative;
-    }
-    .itinerary__item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      left: 19px;
-      top: 40px;
-      width: 2px;
-      height: calc(100% - 8px);
-      background: linear-gradient(to bottom, var(--color-amber), var(--color-gray-200));
-    }
-    .itinerary__num {
-      flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      background: var(--color-navy);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 0.875rem;
-      font-weight: 600;
-      position: relative;
-      z-index: 1;
-    }
-    .itinerary__body {
-      padding: var(--space-sm) 0 var(--space-xl);
-    }
-    .itinerary__step {
-      font-family: var(--font-serif);
-      font-size: 0.9375rem;
-      font-weight: 600;
-      color: var(--color-navy);
-      margin-bottom: 4px;
-    }
-    .itinerary__note {
-      font-size: 0.8125rem;
-      color: var(--color-gray-400);
-      line-height: 1.6;
-    }
-    .itinerary__caution {
-      font-size: 0.8125rem;
-      color: var(--color-gray-600);
-      text-align: center;
-      margin-top: var(--space-md);
-      font-style: italic;
-    }
-
-    /* プランカード拡張 */
-    .plan-card__includes {
-      margin-bottom: var(--space-lg);
-    }
-    .plan-card__includes-title {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--color-navy);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: var(--space-sm);
-      font-family: var(--font-display);
-    }
-    .plan-card__includes ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .plan-card__includes li {
-      font-size: 0.8125rem;
-      color: var(--color-gray-600);
-      padding-left: 1em;
-      position: relative;
-      line-height: 1.6;
-    }
-    .plan-card__includes li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--color-amber);
-      font-size: 0.75rem;
-    }
-    .plan-card__note {
-      font-size: 0.75rem;
-      color: var(--color-gray-400);
-      margin-bottom: var(--space-md);
-      line-height: 1.6;
-      padding: var(--space-sm) var(--space-md);
-      background: #f9f7f4;
-      border-radius: var(--radius-sm);
-      border-left: 2px solid var(--color-gray-200);
-    }
-
-    /* オプションセクション */
-    .options {
-      padding: var(--space-4xl) var(--space-lg);
-      background-color: var(--color-cream);
-    }
-    .options__container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .options__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-lg);
-      margin-top: var(--space-2xl);
-    }
-    @media (min-width: 640px) {
-      .options__grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 1024px) {
-      .options__grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .option-card {
-      background: #fff;
-      border-radius: var(--radius-md);
-      padding: var(--space-xl);
-      box-shadow: var(--shadow-sm);
-      border-top: 3px solid var(--color-amber);
-      transition: box-shadow var(--transition-base), transform var(--transition-base);
-    }
-    .option-card:hover {
-      box-shadow: var(--shadow-lg);
-      transform: translateY(-3px);
-    }
-    .option-card__icon {
-      width: 48px;
-      height: 48px;
-      background: #fdf6ec;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-amber);
-      margin-bottom: var(--space-md);
-    }
-    .option-card__title {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--color-navy);
-      margin-bottom: var(--space-sm);
-    }
-    .option-card__text {
-      font-size: 0.875rem;
-      color: var(--color-gray-600);
-      line-height: 1.8;
-    }
-    .option-card__caution {
-      font-size: 0.75rem;
-      color: var(--color-gray-400);
-      margin-top: var(--space-sm);
-      line-height: 1.6;
-    }
-  </style>
-
-   <!-- =====================================================
+  <!-- =====================================================
        構造化データ（Schema.org JSON-LD）
        1. WebSite        : サイト全体・サイト名
        2. LocalBusiness  : 事業者情報・NAP・営業時間・プライスレンジ
@@ -648,10 +422,9 @@
     ]
   }
   </script>
-  
+
 </head>
 <body>
-
   <!-- ========================================
        HEADER
        ======================================== -->
@@ -665,12 +438,11 @@
         <ul class="header__nav-list">
           <li><a href="#about" class="header__nav-link">伊根の魅力</a></li>
           <li><a href="#plans" class="header__nav-link">ツアープラン</a></li>
-          <li><a href="#options" class="header__nav-link">オプション</a></li>
           <li><a href="#faq" class="header__nav-link">よくある質問</a></li>
           <li><a href="#access" class="header__nav-link">アクセス</a></li>
         </ul>
       </nav>
-      <a href="#plans" class="header__cta">ツアーを予約する</a>
+      <a href="#" class="header__cta">ツアーを予約する</a>
       <a href="en/" class="header__lang" aria-label="English">EN</a>
       <button class="header__menu-btn" id="menuBtn" aria-label="メニューを開く">
         <span></span>
@@ -685,15 +457,14 @@
        ======================================== -->
   <section class="hero">
     <div class="hero__bg">
-      <video src="img/hero.mp4" autoplay muted loop alt="伊根の舟屋の風景" class="hero__bg-image"></video>
+      <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1920&q=80" alt="伊根の舟屋の風景" class="hero__bg-image">
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
       <p class="hero__subtitle">1日1組限定</p>
       <h1 class="hero__title">伊根とツナガル旅</h1>
       <p class="hero__description">
-        景色が物語になる町。<br>
-        ここでしか出逢えない伊根を、あなたへ。
+        景色が物語になる町。ここでしか出逢えない伊根を、あなたへ。
       </p>
       <a href="#plans" class="hero__cta">ツアーを見る</a>
     </div>
@@ -719,22 +490,17 @@
           1日1組限定のオーダーメイド舟屋ガイド。
         </p>
         <p class="about__text">
-          このガイドは、決まった説明を一方的にお話しするのではなく、お客様が「どんな時間を過ごしたいか」を大切にしています。<br>
-          静かに景色を味わいたい方。写真を楽しみたい方。地元の暮らしや裏話を聞きたい方。<br>
-          ただ「美しい景色」を眺めるだけでは見えてこない、伊根という場所の"理由"を、一緒に歩きながら紐解いていきます。
+          このガイドは、決まった説明を一方的にお話しするのではなく、<br class="hide-sp">
+          お客様が「どんな時間を過ごしたいか」を大切にしています。<br>
+          静かに景色を味わいたい方。写真を楽しみたい方。<br>
+          地元の暮らしや裏話を聞きたい方。<br>
+          ただ「美しい景色」を眺めるだけでは見えてこない、<br class="hide-sp">
+          伊根という場所の"理由"を、一緒に歩きながら紐解いていきます。
         </p>
         <p class="about__text">
-          事前のヒアリングをもとに、一日一組限定のオリジナルコースをご提案。<br>
-          ここでしか出逢えないあなた色の旅の一コマをプロデュース致します。
-        </p>
-        <p class="about__text--highlight">
-          「まるでブラタ◯リみたい！」<br>
+          「まるでブラタモリみたい！」<br>
           そんなお声をいただく、伊根を"体感する"ガイドです。
         </p>
-        <div class="about__text--gift">
-          <strong>《伊根とツナガル》オリジナルお土産付きプランもご用意。</strong><br>
-          まるでタイムカプセルのように、帰宅後も、その時味わった伊根の景色・空気感の余韻をお楽しみ頂けるでしょう。
-        </div>
       </div>
 
       <!-- Gallery Carousel -->
@@ -742,16 +508,19 @@
         <div class="gallery" id="gallery">
           <div class="gallery__track" id="galleryTrack">
             <div class="gallery__slide">
-              <img src="img/ine_gallery01.jpg" alt="舟屋の風景">
+              <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80" alt="舟屋の風景1">
             </div>
             <div class="gallery__slide">
-              <img src="img/ine_gallery02.jpg" alt="舟屋の風景">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="舟屋の風景2">
             </div>
             <div class="gallery__slide">
-              <img src="img/ine_gallery03.jpg" alt="舟屋の風景">
+              <img src="https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?w=800&q=80" alt="舟屋の風景3">
             </div>
             <div class="gallery__slide">
-              <img src="img/ine_gallery04.jpg" alt="舟屋の風景">
+              <img src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?w=800&q=80" alt="舟屋の風景4">
+            </div>
+            <div class="gallery__slide">
+              <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&q=80" alt="舟屋の風景5">
             </div>
           </div>
         </div>
@@ -769,62 +538,7 @@
         </div>
       </div>
 
-      <!-- 行程タイムライン -->
-      <div class="itinerary">
-        <h3 class="itinerary__title">行程の概要</h3>
-        <ol class="itinerary__list">
-          <li class="itinerary__item">
-            <div class="itinerary__num">1</div>
-            <div class="itinerary__body">
-              <p class="itinerary__step">伊根町観光案内所　集合</p>
-            </div>
-          </li>
-          <li class="itinerary__item">
-            <div class="itinerary__num">2</div>
-            <div class="itinerary__body">
-              <p class="itinerary__step">舟屋エリアガイド</p>
-              <p class="itinerary__note">地形や町の暮らしの解説</p>
-            </div>
-          </li>
-          <li class="itinerary__item">
-            <div class="itinerary__num">3</div>
-            <div class="itinerary__body">
-              <p class="itinerary__step">舟屋体験</p>
-              <p class="itinerary__note">一般の方の舟屋の内部を見学。海が『庭』である感覚を味わう</p>
-            </div>
-          </li>
-          <li class="itinerary__item">
-            <div class="itinerary__num">4</div>
-            <div class="itinerary__body">
-              <p class="itinerary__step">海上クルーズ</p>
-              <p class="itinerary__note">約20分の伊根湾クルージングで、海から舟屋を感じ、景色と一体化になれる時間</p>
-            </div>
-          </li>
-          <li class="itinerary__item">
-            <div class="itinerary__num">5</div>
-            <div class="itinerary__body">
-              <p class="itinerary__step">「向井酒造」見学</p>
-              <p class="itinerary__note">女性杜氏の酒蔵を訪問（試飲なし）<br>※木曜定休・臨時休業も有り</p>
-            </div>
-          </li>
-          <li class="itinerary__item">
-            <div class="itinerary__num">6</div>
-            <div class="itinerary__body">
-              <p class="itinerary__step">昔ながらの漁法（もんどり漁）体験</p>
-            </div>
-          </li>
-          <li class="itinerary__item">
-            <div class="itinerary__num">7</div>
-            <div class="itinerary__body">
-              <p class="itinerary__step">ツアーの締めくくり</p>
-              <p class="itinerary__note">伊根の楽しみ方やおすすめのスポットをご紹介</p>
-            </div>
-          </li>
-        </ol>
-        <p class="itinerary__caution">※順番や内容は変更になることがあります</p>
-      </div>
-
-      <!-- Features -->
+<!-- Features -->
       <div class="about__features">
         <article class="feature">
           <div class="feature__icon">
@@ -839,8 +553,8 @@
         <article class="feature">
           <div class="feature__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
             </svg>
           </div>
           <h3 class="feature__title">海上クルーズ</h3>
@@ -850,20 +564,26 @@
           <div class="feature__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="12" cy="12" r="10"/>
-              <path d="M12 8v4l3 3"/>
+              <path d="M12 16v-4"/>
+              <path d="M12 8h.01"/>
             </svg>
           </div>
           <h3 class="feature__title">もんどり漁体験</h3>
           <p class="feature__text">昔ながらの漁法を体験。地元の暮らしに触れる貴重なひとときです。</p>
         </article>
+      </div>
+          <h3 class="feature__title">重要伝統的建造物群保存地区</h3>
+          <p class="feature__text">2005年に国の重要伝統的建造物群保存地区に選定。江戸時代から続く漁村の暮らしが今も息づいています。</p>
+        </article>
         <article class="feature">
           <div class="feature__icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/>
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
             </svg>
           </div>
-          <h3 class="feature__title">向井酒造 見学</h3>
-          <p class="feature__text">女性杜氏が営む地元の酒蔵を訪問。伊根の文化と歴史を酒蔵から感じる体験です。</p>
+          <h3 class="feature__title">四季折々の表情</h3>
+          <p class="feature__text">春の桜、夏の青い海、秋の紅葉、冬の雪景色。季節ごとに異なる舟屋の風景をお楽しみいただけます。</p>
         </article>
         <article class="feature">
           <div class="feature__icon">
@@ -874,20 +594,8 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3 class="feature__title">地元サポーターとの交流</h3>
-          <p class="feature__text">地元に暮らす方々との会話や、舟屋・土間での雑談など。旅行者には出逢えない「素の伊根」をご体験いただけます。</p>
-        </article>
-        <article class="feature">
-          <div class="feature__icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-              <rect x="14" y="14" width="7" height="7" rx="1"/>
-            </svg>
-          </div>
-          <h3 class="feature__title">オリジナルお土産</h3>
-          <p class="feature__text">《伊根とツナガル》オリジナルポストカードや選べるお土産付きプランをご用意。旅の余韻をおうちでも。</p>
+          <h3 class="feature__title">地元ガイドの案内</h3>
+          <p class="feature__text">この地で生まれ育ったガイドが、観光ガイドブックには載っていない伊根の魅力をお��えします。</p>
         </article>
       </div>
     </div>
@@ -904,16 +612,47 @@
       </header>
 
       <div class="plans__grid">
-
-        <!-- Plan 1: ブラ伊根 60分 -->
+        <!-- Plan 1 -->
         <article class="plan-card">
           <div class="plan-card__image">
-            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="ブラ伊根 60分コース">
-            <span class="plan-card__badge">スタンダード</span>
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="海上タクシープラン">
+            <span class="plan-card__badge">人気No.1</span>
           </div>
           <div class="plan-card__content">
-            <h3 class="plan-card__title">「ブラ伊根」<br><small style="font-size:0.8em;font-weight:400;">60分 標準コース</small></h3>
-            <p class="plan-card__description">舟屋エリアを歩きながら、地形・暮らし・歴史を体感。初めての伊根にぴったりの入門プランです。</p>
+            <h3 class="plan-card__title">海上タクシープラン</h3>
+            <p class="plan-card__description">小型船で舟屋群を海から眺める約30分のクルーズ。間近で見る舟屋の迫力は圧巻です。</p>
+            <ul class="plan-card__details">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                所要時間: 約30分
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                </svg>
+                定員: 2〜12名
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                料金: ¥1,500〜 / 人
+              </li>
+            </ul>
+            <a href="#" class="plan-card__cta">このプランを予約</a>
+          </div>
+        </article>
+
+        <!-- Plan 2 -->
+        <article class="plan-card">
+          <div class="plan-card__image">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="まち歩きガイドプラン">
+          </div>
+          <div class="plan-card__content">
+            <h3 class="plan-card__title">まち歩きガイドプラン</h3>
+            <p class="plan-card__description">舟屋の路地を歩きながら、建築や暮らしの歴史を学ぶ約60分の散策ツアー。</p>
             <ul class="plan-card__details">
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -925,207 +664,83 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
                 </svg>
-                定員: 2〜5名様
+                定員: 2〜15名
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
-                2名様 ¥11,000（税込）
+                料金: ¥1,000〜 / 人
               </li>
             </ul>
-            <p class="plan-card__note">1名様追加ごとに ¥4,400 / 5名様まで</p>
-            <div class="plan-card__includes">
-              <p class="plan-card__includes-title">含まれる体験</p>
-              <ul>
-                <li>舟屋エリア散策</li>
-                <li>地形や暮らしの解説</li>
-                <li>舟屋内部見学</li>
-                <li>もんどり漁体験</li>
-                <li>写真スポットのご案内</li>
-                <li>《伊根とツナガル》オリジナルポストカード付き</li>
-              </ul>
-            </div>
-            <p class="plan-card__note">※こちらのコースには、海上タクシーは含まれません</p>
             <a href="#" class="plan-card__cta">このプランを予約</a>
           </div>
         </article>
 
-        <!-- Plan 2: 感じる伊根たび 90分 -->
+        <!-- Plan 3 -->
         <article class="plan-card">
           <div class="plan-card__image">
-            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600&q=80" alt="感じる伊根たび 90分コース">
-            <span class="plan-card__badge">人気No.1</span>
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="舟屋ランチプラン">
+            <span class="plan-card__badge plan-card__badge--amber">おすすめ</span>
           </div>
           <div class="plan-card__content">
-            <h3 class="plan-card__title">「感じる伊根たび」<br><small style="font-size:0.8em;font-weight:400;">90分コース</small></h3>
-            <p class="plan-card__description">事前ヒアリングで完全オーダーメイド。酒蔵見学＋海上クルージングで、伊根をより深く感じるプランです。</p>
+            <h3 class="plan-card__title">舟屋ランチプラン</h3>
+            <p class="plan-card__description">実際の舟屋で地元の新鮮な海の幸を堪能。海上タクシーとのセットでお得に。</p>
             <ul class="plan-card__details">
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
-                所要時間: 約90分
+                所要時間: 約120分
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
                 </svg>
-                定員: 2〜8名様
+                定員: 2〜8名
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
-                1組2名様 ¥17,600（税込）
+                料金: ¥5,500〜 / 人
               </li>
             </ul>
-            <p class="plan-card__note">1名様追加ごとに ¥5,500 / 8名様まで</p>
-            <div class="plan-card__includes">
-              <p class="plan-card__includes-title">含まれる体験</p>
-              <ul>
-                <li>事前ヒアリング付き（オーダーメイドコース）</li>
-                <li>舟屋エリア散策（地形や暮らしの解説）</li>
-                <li>酒蔵見学（向井酒造）</li>
-                <li>舟屋内部見学</li>
-                <li>もんどり漁体験</li>
-                <li>写真スポットのご案内</li>
-                <li>海上クルージング（約20分）</li>
-              </ul>
-            </div>
-            <p class="plan-card__note">※酒蔵は木曜定休のほか、臨時休業も有り</p>
             <a href="#" class="plan-card__cta">このプランを予約</a>
           </div>
         </article>
 
-        <!-- Plan 3: プレミアム 180分 -->
+        <!-- Plan 4 -->
         <article class="plan-card">
           <div class="plan-card__image">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="プレミアム 伊根とツナガル旅">
-            <span class="plan-card__badge plan-card__badge--amber">プレミアム</span>
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="サンセットクルーズ">
           </div>
           <div class="plan-card__content">
-            <h3 class="plan-card__title">プレミアム「伊根とツナガル旅」<br><small style="font-size:0.8em;font-weight:400;">180分コース</small></h3>
-            <p class="plan-card__description">天橋立含む丹後半島全域を特別コースでご案内。ランチ・カフェ体験・地元サポーターとの交流まで、伊根を丸ごと体感する最上級プランです。</p>
+            <h3 class="plan-card__title">サンセットクルーズ</h3>
+            <p class="plan-card__description">夕陽に染まる舟屋群を船上から眺める特別なひととき。季節限定の人気プラン。</p>
             <ul class="plan-card__details">
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
-                所要時間: 約180分
+                所要時間: 約45分
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
                 </svg>
-                定員: 2名様〜
+                定員: 2〜10名
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                 </svg>
-                2名様 ¥55,000（税込）
+                料金: ¥2,500〜 / 人
               </li>
             </ul>
-            <div class="plan-card__includes">
-              <p class="plan-card__includes-title">含まれる体験</p>
-              <ul>
-                <li>事前ヒアリング付き（オリジナルオーダーメイドコース）</li>
-                <li>天橋立含む丹後半島全域のご案内</li>
-                <li>舟屋見学</li>
-                <li>ランチ付き（1メニュー）またはカフェ体験（フリードリンク）</li>
-                <li>地元サポーターとのふれ合いタイム</li>
-                <li>選べるオリジナルお土産付き</li>
-              </ul>
-            </div>
             <a href="#" class="plan-card__cta">このプランを予約</a>
           </div>
         </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================
-       OPTIONS SECTION
-       ======================================== -->
-  <section class="options" id="options">
-    <div class="options__container">
-      <header class="section-header">
-        <p class="section-header__en">Options</p>
-        <h2 class="section-header__title">オプション</h2>
-      </header>
-
-      <div class="options__grid">
-
-        <div class="option-card">
-          <div class="option-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
-            </svg>
-          </div>
-          <h3 class="option-card__title">オリジナルお土産 セレクト</h3>
-          <p class="option-card__text">《伊根とツナガル》オリジナルのお土産をセレクトしてお持ち帰りいただけます。まるでタイムカプセルのように、旅の余韻をおうちでも。</p>
-        </div>
-
-        <div class="option-card">
-          <div class="option-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-            </svg>
-          </div>
-          <h3 class="option-card__title">舟屋サンセットクルーズ</h3>
-          <p class="option-card__text">黄金色に染まる伊根湾を船上からお楽しみいただける特別なクルーズ。忘れられない夕暮れのひとときを。</p>
-          <p class="option-card__caution">※海上タクシーは天候・海況により欠航となる場合があります</p>
-        </div>
-
-        <div class="option-card">
-          <div class="option-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3 class="option-card__title">チェックアウト前・朝ガイド</h3>
-          <p class="option-card__text">宿泊翌朝の特別ガイド。静けさの中で味わう早朝の伊根は格別です。</p>
-        </div>
-
-        <div class="option-card">
-          <div class="option-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            </svg>
-          </div>
-          <h3 class="option-card__title">早朝漁港案内</h3>
-          <p class="option-card__text">朝一番の漁港を地元ガイドがご案内。浜買いも現金払いでお楽しみいただけます。</p>
-          <p class="option-card__caution">※漁港の定休日・悪天候による出航できない日もあります<br>※クーラーボックスをご持参ください<br>※レインシューズ、汚れても良い服装、使い捨てビニール手袋推奨</p>
-        </div>
-
-        <div class="option-card">
-          <div class="option-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3 class="option-card__title">地元サポーターとの交流</h3>
-          <p class="option-card__text">地元の方々のお宅や舟屋を訪ね、日々の暮らしをお聞きする特別なふれ合い体験。観光では絶対に出逢えない伊根の素顔を。</p>
-        </div>
-
-        <div class="option-card">
-          <div class="option-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-            </svg>
-          </div>
-          <h3 class="option-card__title">海上タクシー組み合わせプラン</h3>
-          <p class="option-card__text">各プランに海上タクシーを組み合わせたご案内も可能です。ご予約時にお申し付けください。</p>
-          <p class="option-card__caution">※海上タクシーは天候・海況により欠航となる場合があります</p>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1149,7 +764,7 @@
             </svg>
           </summary>
           <div class="faq__answer">
-            <p>はい、事前予約をお願いしております。特に週末や祝日、ゴールデンウィーク、お盆期間は混み合いますので、お早めのご予約をおすすめします。当日のご予約も空きがあれば承りますが、確実にご参加いただくためには前日までのご予約をお願いいたします。</p>
+            <p>はい、事前予約をお願いし���おります。特に週末や祝日、ゴールデンウィーク、お盆期間は混み合いますので、お早めのご予約をおすすめします。当日のご予約も空きがあれば承りますが、確実にご参加いただくためには前日までのご予約をお願いいたします。</p>
           </div>
         </details>
 
@@ -1174,18 +789,6 @@
           </summary>
           <div class="faq__answer">
             <p>もちろんです。お子様連れのご家族も大歓迎です。小学生以下のお子様は保護者同伴でご参加いただけます。海上タクシーにはライフジャケットを完備しておりますので、安心してお楽しみいただけます。3歳以下のお子様は無料です。</p>
-          </div>
-        </details>
-
-        <details class="faq__item">
-          <summary class="faq__question">
-            <span>向井酒造の見学はいつでもできますか？</span>
-            <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </summary>
-          <div class="faq__answer">
-            <p>向井酒造は木曜日が定休日のほか、臨時休業となる場合がございます。ご予約時に確認いたしますが、当日の状況によっては見学できないこともございます。あらかじめご了承ください。</p>
           </div>
         </details>
 
@@ -1241,8 +844,8 @@
       <div class="access__content">
         <div class="access__info">
           <div class="access__group">
-            <h3 class="access__label">集合場所</h3>
-            <p class="access__text">伊根町観光案内所<br>〒626-0423<br>京都府与謝郡伊根町字平田77</p>
+            <h3 class="access__label">所在地</h3>
+            <p class="access__text">〒626-0423<br>京都府与謝郡伊根町字平田77</p>
           </div>
           <div class="access__group">
             <h3 class="access__label">お問い合わせ</h3>
@@ -1261,12 +864,12 @@
           </div>
         </div>
         <div class="access__map">
-          <iframe
+          <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.5!2d135.2667!3d35.6833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5Lym5qC555S6!5e0!3m2!1sja!2sjp!4v1234567890"
-            width="100%"
-            height="100%"
-            style="border:0;"
-            allowfullscreen=""
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
             loading="lazy"
             title="伊根町の地図">
           </iframe>
@@ -1283,12 +886,12 @@
       <div class="footer__main">
         <div class="footer__brand">
           <a href="#" class="footer__logo">
-            <span class="footer__logo-main">伊根とツナガル旅</span>
-            <span class="footer__logo-sub">1日1組限定ガイド</span>
+            <span class="footer__logo-main">伊根の舟屋</span>
+            <span class="footer__logo-sub">ガイドツアー</span>
           </a>
           <p class="footer__description">
-            景色が物語になる町、伊根。<br>
-            ここでしか出逢えないあなた色の旅をプロデュース致します。
+            京都府伊根町の舟屋群を地元ガイドがご案内。<br>
+            日本唯一の景観を、心ゆくまでご堪能ください。
           </p>
         </div>
 
@@ -1298,7 +901,6 @@
             <ul class="footer__nav-list">
               <li><a href="#about">伊根の魅力</a></li>
               <li><a href="#plans">ツアープラン</a></li>
-              <li><a href="#options">オプション</a></li>
               <li><a href="#faq">よくある質問</a></li>
               <li><a href="#access">アクセス</a></li>
             </ul>
@@ -1307,6 +909,7 @@
             <h4 class="footer__nav-title">ご案内</h4>
             <ul class="footer__nav-list">
               <li><a href="#">ご予約について</a></li>
+              <li><a href="#">よくあるご質問</a></li>
               <li><a href="#">キャンセルポリシー</a></li>
               <li><a href="#">プライバシーポリシー</a></li>
             </ul>
@@ -1333,7 +936,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2025 伊根とツナガル旅 All Rights Reserved.</p>
+        <p class="footer__copyright">&copy; 2024 伊根の舟屋ガイドツアー All Rights Reserved.</p>
       </div>
     </div>
   </footer>
